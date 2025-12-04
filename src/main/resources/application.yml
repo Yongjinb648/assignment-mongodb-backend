@@ -1,0 +1,6 @@
+logging:
+  level:
+    org.mongodb.driver: INFO
+
+server:
+  port: 8080
