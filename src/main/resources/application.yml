@@ -1,6 +1,7 @@
-logging:
-  level:
-    org.mongodb.driver: INFO
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
 
 server:
   port: 8080

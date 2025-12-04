@@ -5,12 +5,14 @@ import com.mongodb.client.MongoClients
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.mongodb.core.MongoTemplate
+import org.springframework.beans.factory.annotation.Value
 
 @Configuration
-class MongoConfig {
+class MongoConfig(
 
-    private val uri =
-        "mongodb+srv://Sherpa:hp991115@cluster0.ekfdxsb.mongodb.net/guitar_db?retryWrites=true&w=majority&appName=Cluster0"
+    @Value("\${spring.data.mongodb.uri}")
+    private val uri: String
+) {
 
     @Bean
     fun mongoClient(): MongoClient =
