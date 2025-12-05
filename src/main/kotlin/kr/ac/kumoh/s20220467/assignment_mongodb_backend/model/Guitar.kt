@@ -12,4 +12,5 @@ data class Guitar(
     val bridge: String,
     val color: String,
     val price: Int,
+    var imageUrl: String,
 )
